@@ -31,5 +31,12 @@
                     <input type="submit" value="Submit" />
                 </fieldset>
             </form>
+            <script>
+                function myFunction(e) {
+                    e.preventDefault()
+                    const formData = new FormData(document.getElementById('form'))
+                    console.log(formData)
+                }
+            </script>
         </body>
     </head>
