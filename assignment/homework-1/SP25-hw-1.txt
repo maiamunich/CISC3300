@@ -1,0 +1,25 @@
+﻿CISC 3300 SP24 
+Homework 1 
+1. What is HTML? What does it do? 
+HTML is a markup language, so this means that it has a set of rules that define how to layout and present the texts and images that appear in digital documents. It allows for structuring documents, adding formats, and specifying how different elements should be displayed on webpages. It is considered more of a document formatting language rather than a programming language. HTML creates structures and gives users functionality to interact with. 
+2. Access https://www.fordham.edu/. In your own words, describe how this webpage uses structure to convey meaning and navigation options to the user.
+         By looking at the webpage through the inspector tool we are able to see that this webpage is formatted to give insight into Fordham University. Has its title of Fordham University and then a description. After that it gives multiple links to different resources that a user might need to view more about Fordham. It's interesting to see that it not only uses HTML but also javascript. 
+3. What is an HTML element? Tag? Attribute? 
+        HTML elements are a collection of start and end tags with the content inserted between them, they are the building blocks of web pages and help represent the different type of content such as heading paragraphs, links, and images (<html>,<head>,<title>,<body>,<h1> to <h6>, <p>,...). HTML tags are like containers; they are what hold the code between them (<p> </p>, <head> </head>, <body> </body>,...). And HTML attributes tell us about elements and give more information about the contexts. It adds input into the elements such as add in links, images, and many more. 
+4. What does it mean when an element has semantic meaning? And structural meaning? 
+Semantic elements are intended to convey meaning by their element type while structural elements with meaning have an effect on the structure of a page and don't really convey any meaning by their lament type. So for instant semantic is like the paragraphs and labels as they will create change in the text that is presented on the webpage while structural means that is how it is presented and organized on the webpage. 
+5. What is the default behavior when submitting a HTML form? 
+This is formed when a user presses the submit button, by default the browser sends the form data to the URL specified in the action attribute using the method defined in the method attribute, which is GET if not explicitly set. It also causes the page to refresh if nothing is added to the action URL. 
+
+
+6. Create a webpage for a fake business of your choosing. It should have:
+a. an h1 element with the title of the business 
+b. a p element with a description of the business 
+c. a subsection with a sub heading and p element describing that section 
+d. create an images directory and put a relevant image in the directory, include that image on the webpage via a src attribute with a relative path. 
+e. a contact form which should have: 
+i. a text input element for first name with a label 
+ii. a text input element for last name with a label 
+iii. an email element with a label 
+iv. a submit element with a value of “Submit” 
+Please create a directory called homework-1 in your local repository, include a .txt file with the answers for questions 1-5 and an .html file for question 6 on submission.
