@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <title>css grid</title>
+
+    </head>
+
+    <body>
+
+        <div class="grid-container">
+            <div class="grid-item-1 grid-item">Container1</div>
+            <div class="grid-item-2 grid-item">Container2</div>
+        </div>
+
+        <style>
+
+
+            .grid-container {
+                display: grid;
+
+                grid-template-rows: 100px 100px 100px 100px ;
+        
+                grid-template-columns: 100px 100px 100px 100px ;
+            }
+
+            .grid-item-1 {
+                /*we define where we want our first item to span in the grid*/
+                grid-row-start: 1;
+                grid-row-end: 5;
+                grid-column-start: 1;
+                grid-column-end: 2;
+                background-color: rgb(14, 185, 14);
+            }
+
+            .grid-item-2 {
+                grid-row-start: 1;
+                grid-row-end: 3;
+                grid-column-start: 3;
+                grid-column-end: 5;
+                background-color: rgb(178, 7, 7);
+
+    
+            }
+            .grid-item {
+                color: white
+            }
+
+
+        </style>
+
+    </body>
+
+</html>

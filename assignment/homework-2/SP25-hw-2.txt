@@ -1,0 +1,33 @@
+﻿CISC 3300 SP25 
+Homework 2 
+1. What do the id and class attributes do? How are they alike and different? 
+The HTML id attribute is used to specify a unique id for an HTML element. The HTML class attribute is used to specify a class for an HTML element. Both are used for styling and scripting, but id are unique to that element while class can be shared with multiple elements.
+2. What are the parts of a CSS rule? 
+A sector and declaration. The declarations are inside the curly brackets and have a property and a value and apply a visual effect, the sectors are used to “find” or select the HTML element you want to style.
+
+
+3. Explain how CSS rules cascade.
+ Based on it you have two or more rules that apply to the same element, you have to take into consideration the precedence. 
+Important: this keyword will make it number 1 priority 
+Specificity: if there are 2 or more css rules that point to the same element, the selector with the highest specificity will beat the other and its style declaration will be applied to that HTML element
+Inheritance: a child element will naturally inherit properties from its parent element.
+The last rule is that if there are two or more css rules that point to the same element and they are equally specific the rule applied last with win
+
+
+4. Contrast display: block, inline, inline-block. 
+ Inline: this displays an element as an inline element such as <span>, adding any height and width properties to it will cause it no effect and this is the default. 
+Block: this displays and element such as <p>, it starts on a new line and takes us the whole width 
+Inline-block: This displays an element in an inline-level block container. The element itself is formatted as an inline element, but you can apply height and width values.
+
+
+5. What are border, padding, and margin? 
+Border: every box has a border even if it's not visible. This divided the other boxes from the ones around it. 
+Margin: sit outside the edge of the border, you can set the width of a margin to create a gap between the border and boxes. 
+Padding: is the space between the border of a box and any content that is inside within the box. Padding property allows you to specify how much space should appear between the content of an element and its border
+
+
+6. Let’s improve our fake business webpage from the first homework: 
+a. Make a full width header div with a centered row of links and a border. The links can route to ‘#’. Give the header a background color and the links a foreground color. 
+b. Create a logo with a fancy font from google fonts and some color. And set a google font for the text of the rest of your webpage. 
+c. Every item on the page should have adequate margin/padding. 
+d. Try to think about the usability principles we have discussed in class; try to make the design choices increase the usability of the page.
