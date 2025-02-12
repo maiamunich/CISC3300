@@ -88,11 +88,39 @@
                 width: 250px;
             }
             .header-nav__logo {
-                max-width: 100px;
-                height: 100px;
-                margin-left:10px;
-                display: block;
-                margin-top: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 15px;
+            }
+
+            .header-nav__logo a {
+                color: #900028;
+                text-decoration: none;
+                font-weight: bold;
+                font-size: 24px;
+            }
+
+            .navigate-btn {
+                position: absolute;
+                right: 20px;
+                top: 20px;
+            }
+
+            .nav-button {
+                background-color: #900028;
+                color: white;
+                padding: 10px 20px;
+                border: none;
+                cursor: pointer;
+                font-size: 14px;
+                display: flex;
+                align-items: center;
+                gap: 5px;
+            }
+
+            .chevron-down {
+                font-size: 10px;
             }
 
             .undergraduate-banner {
@@ -129,7 +157,13 @@
     <body>
         <header>
             <div class="header-nav__logo">
-                <img src="Images_Fordham_page/Fordham_logo.jpg" alt="Fordham University Logo" style="max-width: 200px; height: auto; margin-left: 20px;">
+                <a href="#">FORDHAM UNIVERSITY</a>
+            </div>
+            <div class="navigate-btn">
+                <button class="nav-button">
+                    <span class="chevron-down">▼</span>
+                    NAVIGATE FORDHAM
+                </button>
             </div>
             <div class="undergraduate-banner">
                 <h2>Undergraduate Admission</h2>
