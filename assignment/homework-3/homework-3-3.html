@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Computer Science - Fordham University</title>
 
         <style>
             * {
@@ -28,7 +29,9 @@
             }
 
             h1 {
+                color: #900028;
                 margin: 30px 0 30px;
+                font-size: 2.5rem;
             }
 
             .top-nav-bar {
@@ -92,20 +95,57 @@
                 margin-top: 10px;
             }
 
+            .undergraduate-banner {
+                background-color: #900028;
+                color: white;
+                padding: 20px;
+            }
+
+            .undergraduate-banner h2 {
+                font-size: 2.5rem;
+                margin-left: 20px;
+            }
+
+            .main-nav {
+                background-color: #333;
+                padding: 10px 0;
+            }
+
+            .main-nav ul {
+                list-style: none;
+                display: flex;
+                margin-left: 20px;
+            }
+
+            .main-nav ul li a {
+                color: white;
+                text-decoration: none;
+                padding: 0 15px;
+                font-size: 14px;
+            }
+
         </style>
     </head>
     <body>
-        <header class="Fordham-logo">
-            <nav class="header-nav">
-                <div class="header-nav__bottom">
-                    <div class="header-nav__bottom_container">
-                        <div class="header-nav__logo">
-                            <a href="/">
-                                <img src="Images_Fordham_page/Fordham_logo.jpg" alt="Fordham University Logo" style="max-width: 200px; height: auto; margin-left: 20px;">
-                            </a>
-                        </div>
-                    </div>
-                </div>
+        <header>
+            <div class="header-nav__logo">
+                <img src="Images_Fordham_page/Fordham_logo.jpg" alt="Fordham University Logo" style="max-width: 200px; height: auto; margin-left: 20px;">
+            </div>
+            <div class="undergraduate-banner">
+                <h2>Undergraduate Admission</h2>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#">Why Fordham</a></li>
+                    <li><a href="#">Majors and Minors</a></li>
+                    <li><a href="#">Choose Your Campus</a></li>
+                    <li><a href="#">Outcomes</a></li>
+                    <li><a href="#">Visit</a></li>
+                    <li><a href="#">Apply</a></li>
+                    <li><a href="#">International Students</a></li>
+                    <li><a href="#">Transfer Students</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
             </nav>
         </header>
         <div class="main-container">
@@ -119,17 +159,17 @@
             </div>
             <div class="info-container">
                 <div class="top-nav-bar">
-                    <a href="https://www.fordham.edu/">Home</a> &#x2f;
-                    <a href="https://www.fordham.edu/admissions-and-aid/">Admissions and Aid</a> &#x2f;
-                    <a href="https://www.fordham.edu/undergraduate-admission/">Undergraduate Admission</a> &#x2f;
-                    <a href="https://www.fordham.edu/undergraduate-admission/majors-and-minors/">Majors and Minors</a> &#x2f;
-                    <a href="https://www.fordham.edu/undergraduate-admission/majors-and-minors/computer-science/" class="text-color">Computer Science</a>
+                    <a href="#">Home</a> /
+                    <a href="#">Admissions and Aid</a> /
+                    <a href="#">Undergraduate Admission</a> /
+                    <a href="#">Majors and Minors</a> /
+                    <a href="#">Computer Science</a>
                 </div>
                 <h1>Computer Science</h1>
                 <div class="info-section">
                     <p>Degree Options: Major, Minor</p>
                     <p>Locations: Lincoln Center, Rose Hill</p>
-                    <p>Visit the <a href="https://www.fordham.edu/academics/departments/computer-and-information-science/" class="text-color">Computer and Information Science Department</a></p>
+                    <p>Visit the <a href="#">Computer and Information Science Department</a></p>
                 </div>
                 <div class="quote-section">
                     <p>Wherever there's a computer, there's a skilled person developing, maintaining, hacking, advancing, or simply using it. Be that person.</p>
@@ -143,8 +183,5 @@
                 </div>
             </div>
         </div>
-
-
-
     </body>
 </html>
