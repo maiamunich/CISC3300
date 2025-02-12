@@ -71,8 +71,7 @@
             }
 
             .info-section p {
-                margin-bottom: 5px;
-                margin:30px 0;
+                margin: 10px 0;
             }
 
             .quote-section p {
@@ -164,6 +163,39 @@
                 text-decoration: underline;
             }
 
+            .container {
+                display: flex;
+                gap: 2rem;
+                align-items: flex-start;
+                margin-bottom: 2rem;
+            }
+
+            .para-section {
+                flex: 2;  /* Takes up more space */
+            }
+
+            .image-section {
+                flex: 1;  /* Takes up less space */
+            }
+
+            .parallel-image {
+                width: 100%;
+                height: auto;
+                max-width: 400px;  /* Limiting the maximum width */
+                display: block;
+            }
+
+            /* Make it responsive */
+            @media (max-width: 768px) {
+                .container {
+                    flex-direction: column;
+                }
+                
+                .image-section {
+                    width: 100%;
+                }
+            }
+
         </style>
     </head>
     <body>
@@ -230,7 +262,7 @@
                     </div>
                     
                     <div class="image-section">
-                        <img src="https://www.fordham.edu/media/review/content-assets/migrated/images/iStock_000021097427Medium.jpg" 
+                        <img src="images/computer_image.jpg" 
                              alt="Fordham University Stock Image"
                              class="parallel-image">
                     </div>
