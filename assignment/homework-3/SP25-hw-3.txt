@@ -1,0 +1,47 @@
+﻿CISC 3300 S25 
+Homework 3 
+1. Compare and contrast Flexbox and CSS grid, how are they alike and how are they different? 
+Flexbox
+* One dimension
+* Display: flex-> defines a flex container 
+* Flez-direction (established the main-axis, thus defining the direction flex items are placed in the flex container 
+* Flew-wrap: by default, flex items will all try to get onto one line. You can change that and allow the items to wrap as needed with this property. 
+* Justify-content: defines the alignment along the main axis, distributes extra free space leftover when either all the flex items on a line are inflexible, or are flexible but have reached their maximum size 
+* Align-items: defines the default behavior for how flex items are laid out along the cross axis on the current line, so if the horizontal main axis, this would handle the vertical align 
+   * Child Elements 
+      * Order: by default, flex items are plaid out in hte source order. However, the order property controls th order in which they appear in the flex container. 
+      * Align-self: this allows the default alignment (or the one specified by align-items) to be overridden for individual flex items. 
+CSS Grids 
+* Two dimensions
+* Grid-template-columns, gird-template-rows
+* Defines the columns and rows of the grid with a space-separated list of values. The values represent the track size, and the space between them represents the grid lines.
+Compare
+* They have similar layout systems 
+* Parent-child relationship 
+* Alignment control 
+Differences
+* Dimensional control 
+* Layout approaches 
+   * .flex-containter{ display: flex; gap: 20px}
+   * .grid-container{display:grid; grid-template-area: “header header” “sidebar main” “footer”;
+* Space distribution
+
+
+
+
+2. What’s responsive design in web development and how do we implement it? 
+
+
+Responsive web design is an approach that makes web pages render well on different devices and window/screen size. It ensures that a website is usable and looks good across all devices - from desktop computers to mobile phones. This is like @ media detects for specific devices, as well as flexible images that use auto for height for instance.
+
+
+3. Create a HTML file with a flex container and three flex items. Give the flex items a color and width/height of 100px. For screens <500px wide have the items flow vertically and >= 500px flow horizontally. 
+
+
+4. Create a form with bootstrap, should have a few input elements, labels, and a submit button. 
+
+
+5. You are the web designer for the Computer Science Department at Fordham. You have been asked to design this mock up for the CS homepage. 
+https://www.fordham.edu/undergraduate-admission/majors-and-minors/computer-scienc e/ 
+a. Try to get as close as possible to the mock up, with colors and the font(Raleway), etc. It does not need to be pixel perfect. The image can be accessed here: 
+https://www.fordham.edu/media/review/content-assets/migrated/images/iStock_0 00021097427Medium.jpg
