@@ -3,11 +3,11 @@ const hasPinecone = (str) => {
 };
 
 const sentences = [
-    "The pinecone fell from the tree",
-    "The sky is blue today",
-    "I love collecting pinecones in autumn",
-    "Dogs are great pets",
-    "This Pinecone database is amazing"
+    "How are pinecone created?",
+    "I love the purple skys",
+    "Collecting pinecones is my hobby",
+    "Cats are the best thing created",
+    "Do pinecones taste like sap?"
 ];
 
 const pineconeResults = sentences.filter(hasPinecone);
