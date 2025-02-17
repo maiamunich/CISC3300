@@ -58,9 +58,11 @@ const cats = [
 ];
 
 const cat = {name:"Pinecone", age:13, type:'Munchkin', cuteness: 9001};
-const cat2 ={adoptionStatus: 'available'}
-console.log(cat.name);
-console.log(cat2.adoptionStatus);
 
-const availableCats = cats.filter(cat => cat.adoptionStatus === 'available');
-console.log(availableCats);
+const availableCats = cats.filter(cat => cat.status == "available").map(cat => cat.name)
+
+const adoptionSentences = "I would love to adopt " +availableCats.join(", ") + "because they need a loving home!";
+
+console.log("Available Cats: ", availableCats);
+console.log("Adoption Sentences: ", adoptionSentences);
+
