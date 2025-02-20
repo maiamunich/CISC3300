@@ -20,7 +20,14 @@ $cats = [
         'name' => 'Lily',
         'adoptionStatus' => 'not-available'
     ],
-    // ... you can add more cats from your previous array
+    [
+        'name' => 'Coco',
+        'adoptionStatus' => 'available'
+    ],
+    [
+        'name' => 'Oreo',
+        'adoptionStatus' => 'not-available'
+    ]
 ];
 
 // Check if the request is for cats data
