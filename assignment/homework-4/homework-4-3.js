@@ -59,7 +59,6 @@ const cats = [
 
 const cat = {name:"Pinecone", age:13, type:'Munchkin', cuteness: 9001};
 
-// Loop through the cats array
 cats.forEach(cat => {
     console.log(`Name: ${cat.name}, Adoption Status: ${cat.adoptionStatus}`);
 });

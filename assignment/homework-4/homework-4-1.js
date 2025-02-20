@@ -59,7 +59,7 @@ const cats = [
 
 const cat = {name:"Pinecone", age:13, type:'Munchkin', cuteness: 9001};
 
-/*const availableCats = cats.filter(cat => cat.status == "available").map(cat => cat.name)*/
+/*Question 6*/ 
 const cat2 ={adoptionStatus: 'available'}
 console.log(cat.name);
 console.log(cat2.adoptionStatus);
@@ -70,5 +70,18 @@ const adoptionSentence = "I would love to adopt " + availableCats.join(", ") + "
 console.log("Available Cats:", availableCats);
 console.log("Adoption Sentence:", adoptionSentence);
 
+/* Question 7*/
 
-
+const randomNumber = Math.random() * 10;
+let message;
+if (randomNumber > 5) {
+    message = "greater than five!";
+} else {
+    message = "less than five!";
+}
+console.log("Random number:", randomNumber);
+console.log("Message:", message);
+ /* Question 8*/
+ cats.forEach(cat => {
+    console.log(`Name: ${cat.name}, Adoption Status: ${cat.adoptionStatus}`);
+});
