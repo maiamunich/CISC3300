@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AJAX Request Demo</title>
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <button id="getData">Get Data</button>
+
+    <script>
+        $(document).ready(function() {
+            $('#getData').click(function() {
+                $.ajax({
+                    url: 'getData.php',
+                    method: 'GET',
+                    success: function(response) {
+                        console.log('Response from server:', response);
+                    },
+                    error: function(xhr, status, error) {
+                        console.error('Error:', error);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
