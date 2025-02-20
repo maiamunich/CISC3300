@@ -85,3 +85,22 @@ console.log("Message:", message);
  cats.forEach(cat => {
     console.log(`Name: ${cat.name}, Adoption Status: ${cat.adoptionStatus}`);
 });
+
+/* Question 9*/
+if (1 == '1') {
+    console.log("First comparison is true! (using ==)");
+    console.log("This is because == converts types before comparing");
+}
+
+if (1 === '1') {
+    console.log("This won't print!");
+} else {
+    console.log("Second comparison is false! (using ===)");
+    console.log("This is because === checks both value AND type");
+}
+
+/* Question 10*/
+
+const cuteCats = cats.map(cat => cat.name + " is cute!");
+
+console.log("Cute cats:", cuteCats);
