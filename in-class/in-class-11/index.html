@@ -6,37 +6,19 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-    <button id="getData">Get Cats Data</button>
-    <div id="catsContainer"></div>
+    <button id="getData">Get Data</button>
 
     <script>
         $(document).ready(function() {
             $('#getData').click(function() {
                 $.ajax({
-                    url: './getData.php',
+                    url: 'getData.php',
                     method: 'GET',
-                    dataType: 'json',
                     success: function(response) {
-                        console.log('Cats data:', response);
-                        
-                        // Display cats in the container
-                        let html = '<ul>';
-                        response.forEach(cat => {
-                            html += `<li>Name: ${cat.name}, Status: ${cat.adoptionStatus}</li>`;
-                        });
-                        html += '</ul>';
-                        
-                        $('#catsContainer').html(html);
+                        console.log('Response from server:', response);
                     },
                     error: function(xhr, status, error) {
-                        console.error('Full error details:', xhr.responseText);
-                        console.error('Status:', status);
                         console.error('Error:', error);
-                        $('#catsContainer').html('Error loading cats data');
                     }
                 });
             });
-        });
-    </script>
-</body>
-</html>

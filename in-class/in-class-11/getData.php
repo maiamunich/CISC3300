@@ -1,47 +1,15 @@
 <?php
+// Set header to return JSON
+header('Content-Type: application/json');
 
-// Set headers for JSON and CORS
-header("Content-Type: application/json");
-header("Access-Control-Allow-Origin: *");
+// Create an associative array
+$data = array(
+    "name" => "Charlie",
+    "type" => "Cat",
+    "age" => 3,
+    "color" => "Orange",
+    "isAdopted" => true
+);
 
-$uri = strtok($_SERVER["REQUEST_URI"], '?');
-
-//get uri pieces
-$uriArray = explode("/", $uri);
-//var_dump($uriArray);
-
-// Your cats data
-$cats = [
-    [
-        'name' => 'Charlie',
-        'adoptionStatus' => 'available'
-    ],
-    [
-        'name' => 'Lily',
-        'adoptionStatus' => 'not-available'
-    ],
-    [
-        'name' => 'Coco',
-        'adoptionStatus' => 'available'
-    ],
-    [
-        'name' => 'Oreo',
-        'adoptionStatus' => 'not-available'
-    ]
-];
-
-// Check if the request is for cats data
-if ($uriArray[1] === 'cats' && $_SERVER['REQUEST_METHOD'] === 'GET') {
-    echo json_encode($cats);
-    exit();
-}
-
-if ($uriArray[1] === 'form' && $_SERVER['REQUEST_METHOD'] === 'POST') {
-    echo json_encode([
-        'message' => 'Success'
-    ]);
-    exit();
-}
-
-
-?>
+// Return JSON encoded array
+echo json_encode($data);
