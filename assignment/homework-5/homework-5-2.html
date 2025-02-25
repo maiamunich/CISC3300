@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Changing List</title>
+    <style>
+        .list-item {
+            cursor: pointer;
+            padding: 10px;
+            margin: 5px;
+            transition: background-color 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <h1>Click the items to change their colors!</h1>
+    
+    <ul id="colorList">
+        <li class="list-item">Item 1</li>
+        <li class="list-item">Item 2</li>
+        <li class="list-item">Item 3</li>
+        <li class="list-item">Item 4</li>
+        <li class="list-item">Item 5</li>
+    </ul>
+
+    <script>
+        const colors = ['#FF6B6B', '#4ECDC4', '#45B7D1', '#96CEB4', '#FFEEAD'];
+        const items = document.querySelectorAll('.list-item');
+        
+        items.forEach((item, index) => {
+            item.addEventListener('click', () => {
+                item.style.backgroundColor = colors[index];
+            });
+        });
+    </script>
+</body>
+</html>
