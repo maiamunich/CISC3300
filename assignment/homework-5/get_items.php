@@ -18,11 +18,15 @@ $items = array(
     array(
         "name" => "Blueberry Muffin",
         "price" => 2.99
-    )
+    ),
     array(
         "name" => "Chocolate Croissant",
         "price" => 3.50
     ),
+    array(
+        "name" => "Vanilla Latte",
+        "price" => 4.99
+    )
 );
 
 echo json_encode($items);
