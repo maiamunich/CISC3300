@@ -1,0 +1,40 @@
+{
+  "store_name": "Happy Paws Pet Shop",
+  "location": {
+    "street": "5653 W 12th St",
+    "city": "Los Angeles",
+    "state": "CA",
+    "zip": "90038"
+  },
+  "pets_in_stock": [
+    {
+      "id": "C001",
+      "type": "cat",
+      "name": "Whiskers",
+      "age": 2,
+      "price": 25.50,
+      "vaccinated": true,
+      "favorite_toys": ["mouse", "laser pointer", "yarn"]
+    },
+    {
+      "id": "D001",
+      "type": "dog",
+      "name": "Ziggy",
+      "age": 1,
+      "price": 50.50,
+      "vaccinated": true,
+      "favorite_toys": ["ball", "rope", "frisbee"]
+    }
+  ],
+  "store_hours": {
+    "monday": "closed",
+    "tuesday": "9:00-18:00",
+    "wednesday": "9:00-18:00",
+    "thursday": "9:00-18:00",
+    "friday": "9:00-20:00",
+    "saturday": "10:00-17:00",
+    "sunday": "10:00-17:00"
+  },
+  "is_open": true,
+  "number_of_employees": 12
+}
