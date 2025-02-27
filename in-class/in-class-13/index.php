@@ -1,35 +1,25 @@
 <?php
-echo $required1;
-
-header('Content-Type: application/json');
-
-// Sample business data - you can modify this
-$items = array(
-    array(
-        "name" => "EXPLOSION",
-        "color" => "red"
-    ),
-    array(
-        "name" => "Baby",
-        "color" => "baby pink"
-    ),
-    array(
-        "name" => "Ocean Glass",
-        "color" => "sea green"
-    ),
-    array(
-        "name" => "Blueberry",
-        "color" => "blue-purple hue"
-    ),
-    array(
-        "name" => "Chocolate",
-        "color" => "dark brown"
-    ),
-    array(
-        "name" => "Vanilla Swirl",
-        "color" => "white & black"
-    )
-);
-
-echo json_encode($items);
+require_once 'config.php';
 ?>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple PHP App</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <h1><?php echo $required1; ?></h1>
+    <button id="getDataButton">Click Me</button>
+    <div id="result"></div>
+
+    <script>
+        $(document).ready(function() {
+            $('#getDataButton').click(function() {
+                $.get('getData.php', function(data) {
+                    $('#result').text(data.message);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
