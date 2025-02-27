@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Button Business</title>
+        <title>Button Colors</title>
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
         <style>
             .item-card {
@@ -13,43 +13,32 @@
                 display: inline-block;
                 width: 200px;
                 background-color: #f9f9f9;
-                box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
             }
             .item-name {
                 font-weight: bold;
-                color: #333;
                 margin-bottom: 8px;
             }
             .item-color {
-                color: #2c5282;
-                font-size: 1.2em;
-            }
-            #items-container {
-                margin-top: 20px;
+                font-style: italic;
             }
             button {
                 padding: 10px 20px;
-                background-color: #4CAF50;
-                color: white;
-                border: none;
-                border-radius: 4px;
+                margin: 20px;
+                font-size: 16px;
                 cursor: pointer;
-            }
-            button:hover {
-                background-color: #45a049;
             }
         </style>
     </head>
     <body>
-        <h1>What Buttons Do You Want</h1>
-        <button id="loadItems">PRESS ME!</button>
+        <h1>Button Colors Database</h1>
+        <button id="loadItems">Show Available Colors</button>
         <div id="items-container"></div>
 
         <script>
             $(document).ready(function() {
                 $('#loadItems').on('click', function() {
                     $.get('index.php', function(response) {
-                        $('#items-container').empty(); // Clear existing items
+                        $('#items-container').empty();
                         
                         response.forEach(function(item) {
                             const itemDiv = $('<div>')
@@ -62,7 +51,7 @@
                                 .append(
                                     $('<div>')
                                         .addClass('item-color')
-                                        .text('$' + item.color.toFixed(2))
+                                        .text('Color: ' + item.color)
                                 );
                             
                             $('#items-container').append(itemDiv);
