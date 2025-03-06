@@ -1,0 +1,9 @@
+RewriteEngine On
+RewriteBase /
+
+# If requested resource exists as a file or directory, skip next rule
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Otherwise, redirect to index.php
+RewriteRule ^(.*)$ index.php [L,QSA] 
