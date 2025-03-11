@@ -1,0 +1,60 @@
+﻿CISC 3300 S25 
+Homework 7 
+1. What is a class? What is an object? What is OOP? 
+A Class is a template for creating objects; it's required, unlike JS, as each time we create an object, we set it up with properties. We must define properties and methods. An object is an instance of a class, just like objects in JavaScript. In PHP, a variable for an object refers to the dynamic data, consisting of the data we set up with the class using the new keyword. Object-Oriented Programming in PHP is a programming style in which you structure your application around objects. To do this, you must have classes that have properties and methods. OOP can have inheritance when a class derives from another class.
+
+
+2. Why use an abstract class in OOP? 
+An abstract class is a class that is not meant to be instantiated; it is only extended by child classes. Abstract classes are generally used when a class provides some high-level functionality but leaves out specific details to be implemented by derived classes. Abstract classes allow the parent to create a default for methods and a template for templates. 
+
+
+3. What are superglobals in PHP, what are some examples of data they provide? 
+
+
+Several predefined variables in PHP are “superglobals” which means they are available in all scopes throughout a script. There is no need to do global $ $variable; to access them within functions or methods. Superglobal arrays such as $SERVER are an example of one of the superglobal arrays that the PHP interpreter creates each time a page is requested. This also offers $SERVER[“REQUEST_URI”], which will give us our URI, and $_SERVER[‘REQUEST_METHOD’], which will provide us with our request method.
+
+
+4. What are the two steps to setting up and using a class via namespaces? 
+The two steps to set up a via namespace consist of 
+1. Define a namespace in the class to be used 
+2. In the place we want to use the class, we have two options 
+   1. Typing out the full namespace every time we want to use that class 
+      1. $$postModel =  new app\models\Post();
+      2. Or import the class into the current namespace with the use keyword 
+         1. Using app\models\Post;
+         2. $postModel = Post();
+ 
+5. What is MVC? Detail the different parts. 
+MVC is an architectural/design pattern that separates an application into three main logical components: Model, View, and Controller. Each architectural component is built to handle specific development aspects of an application. It isolates the business logic and presentation layers from each other and separates concerns.
+1. Model: corresponds to all the data-related logic that the user works with, it can represent either the data that is being transferred between the View and the Controller components or any other business logical-related data. It can add or retrieve data from the database. It responds to the controller’s request because it can't interact with the database by itself. The model interacts with the database and gives the required data back to the controller. 
+   1. Select * from Student; 
+      1. Which then goes to the controller 
+      2. It also gets the info from the database 
+2. Controller: it enables the interconnection between the views and the model so it acts as an intermediary. The controller doesn't have to worry about handling data logic, it just tells the model what to do. It processes all the business logic and incoming requests, manipulates data using the Model component, and interacts with the View to render the final output. Also includes routing: we need to react to URLs and HTTP verbs to select the controller methods we want to run. 
+   1. if(success){Display.Student}
+      1. It fetches the student presentation from the view 
+3. View: is used for all the UI logic of the application, it generates a user interface for the user. Views are created by the data which is collected by the model component, but these data aren't taken directly, but through the controller. It only interacts with the controller. 
+   1. <Body><h1>Student</h1></Body>
+      1. It will go back to the controller and then post it on the end user 
+
+
+6. If I had a resource called users in my application that was designed with RESTFUL URI design, what would the URI and HTTP verbs be for: 
+a. getting all users 
+        URI: /user
+                HTTP verbs: GET
+b. getting one user 
+        URI: /user/{id}  ({id} is the specific user’s identifier)
+        HTTP verb: GET
+c. saving a user 
+        URI: /users
+        HTTP verb: POST 
+d. editing a user 
+        URI: /users/{id} 
+        HTTP verb: PUT (for a complete replacement) or PATCH (for partial update)
+e. deleting a user 
+        URI: /users/{id}
+        HTTP verb: DELETE
+
+
+7. Create a PHP project in an MVC style. It should have the ability to submit a new note resource, a note should have a title and a description. The title of the note should be more than 3 characters long and the description should be more than 10 characters long. Any special characters should be converted to HTML entities. The frontend shows a success message if the request is successful and an error message if anything is wrong. Add some basic styling. 
+a. no need for a model class, the validation can happen in a controller method.
