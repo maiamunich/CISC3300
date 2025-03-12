@@ -29,20 +29,17 @@
 <body>
     <h1>Create New Note</h1>
 
-    <?php if (isset($error)): ?>
-        <div class="error"><?php echo $error; ?></div>
-    <?php endif; ?>
-
-    <?php if (isset($success)): ?>
-        <div class="success"><?php echo $success; ?></div>
-    <?php endif; ?>
+    <div id="messages">
+        [ERROR_MESSAGE]
+        [SUCCESS_MESSAGE]
+    </div>
 
     <form method="POST" action="">
         <label for="title">Title:</label>
-        <input type="text" id="title" name="title" value="<?php echo isset($title) ? htmlspecialchars($title) : ''; ?>">
+        <input type="text" id="title" name="title" value="[TITLE_VALUE]">
 
         <label for="description">Description:</label>
-        <textarea id="description" name="description"><?php echo isset($description) ? htmlspecialchars($description) : ''; ?></textarea>
+        <textarea id="description" name="description">[DESCRIPTION_VALUE]</textarea>
 
         <br><br>
         <input type="submit" value="Create Note">
