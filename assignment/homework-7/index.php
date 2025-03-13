@@ -2,5 +2,12 @@
 require_once 'controllers/NoteController.php';
 
 $controller = new NoteController();
-$controller->handleRequest();
+
+// If it's a GET request, show the form
+if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+    $controller->showForm();
+} else {
+    // For POST requests, handle the API
+    $controller->handleRequest();
+}
 ?> 

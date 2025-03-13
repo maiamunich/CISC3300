@@ -1,5 +1,9 @@
 <?php
 class NoteController {
+    public function showForm() {
+        include 'views/note_form.html';
+    }
+
     public function handleRequest() {
         header('Content-Type: application/json');
         
