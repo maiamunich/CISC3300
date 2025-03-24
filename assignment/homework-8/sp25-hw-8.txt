@@ -1,0 +1,33 @@
+﻿CISC 3300 S25 
+Homework 8 
+1. What are sessions and cookies? What do they do?
+ Cookies are when a website cal tells a browser to store data about the user and their visit in a text file. Each time the browser requests another page from that domain, the browser sends the data in the cookie back to the server. It lives in the HTTP header, and the server can access it in the $_COOKIR superglobal. A session stores information about a user and their preference on the server. Like cookies, they are also text files; they live in the tmp directory, which is in the Apache files in MAMP. They work together. First, we generate a session and a cookie via a session start, that cookie has the ability to access our sessions (via the session ID) on each new request, where we will determine if they are still authenticated. We configure how long both should last and if a cookie should persist even when a browser is closed. 
+2. What is SQL? MySQL? What are relational databases? 
+Structured query language (SQL) is a standard language for database creation and manipulation. MySQL is a relational database program (one of many) that uses SQL queries. A relational database uses a structure that allows us to identify and access data in relation to another piece of data in the database, these are called relationships.  
+
+
+3. What is normalization in SQL? 
+Normalization avoids data duplication by using relationships. Normalization organizes the columns and tables of a database to ensure that database integrity constraints properly execute their dependencies. We use relationships so that our data can scale and be normalized. 
+
+
+4. What are primary and foreign keys? 
+The primary key is a field that uniquely identifies each record table; there are three requirements for the primary key: they cannot be null, they must be unique, and there can only be one defined per table. A foreign key is a field in one table that references that primary key in another table. The data in the fields from both tables is exactly the same, and the table with the primary key record must have existing records before the table with the foreign key record has the matching or related records. 
+
+
+
+
+5. Write statements to: 
+a. create a new database in phpmyadmin (or use the one from the in-class assignment) 
+b. create a notes table, including the following columns: 
+i. id, which should be an integer type, have space for 11 characters, not be nullable, and auto-increment, set the id column as the primary key 
+ii. title, which should be a varchar type, have space for 80 characters, and not be nullable 
+iii. description, which should be any text type, not be nullable 
+6. Write statements to 
+a. insert some data 
+b. update some data 
+c. delete some data 
+7. Write queries to 
+a. select all notes and order them by name in reverse alphabetical order
+ b. select the second note in the table only. Assume that you don’t know the ID number of it 
+c. select all notes that have descriptions which contain vowels 
+Include SQL statements from questions 5-7 in a sql file in your submission.
