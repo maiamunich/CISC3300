@@ -1,10 +1,23 @@
 <?php
+// Debug information
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
+echo "Current directory: " . __DIR__ . "<br>";
+echo "Looking for .env at: " . __DIR__ . '/.env' . "<br>";
+
+if (file_exists(__DIR__ . '/.env')) {
+    echo ".env file found!<br>";
+} else {
+    echo ".env file NOT found!<br>";
+}
+
 // Load environment variables from .env file
-$env = parse_ini_file('.env');
+$env = parse_ini_file(__DIR__ . '/.env');
 
 // Check if we're accessing /posts
 $request_uri = $_SERVER['REQUEST_URI'];
-if (strpos($request_uri, '/posts') === false) {
+if (strpos($request_uri, '/in-class-19/posts') === false) {
     http_response_code(404);
     echo json_encode(['error' => 'Not Found']);
     exit;
