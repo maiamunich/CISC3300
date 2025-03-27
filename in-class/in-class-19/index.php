@@ -22,24 +22,21 @@ echo "Request URI: " . $_SERVER['REQUEST_URI'] . "<br>";
 if ($_SERVER['REQUEST_URI'] === 'MAMP-directory/in-class-19/posts' || 
     $_SERVER['REQUEST_URI'] === 'MAMP-directory/in-class-19/index.php') {
     try {
-        // Connect to database using .env variables
+        // Connect to database
         $pdo = new PDO(
             "mysql:host={$env['DB_HOST']};dbname={$env['DB_NAME']}",
             $env['DB_USER'],
             $env['DB_PASS']
         );
         
-        // Set PDO to throw exceptions on error
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         
-        // Query posts table
+        // Get posts data
         $stmt = $pdo->query('SELECT * FROM posts');
         $posts = $stmt->fetchAll(PDO::FETCH_ASSOC);
         
-        // Set JSON content type header
+        // Return JSON response
         header('Content-Type: application/json');
-        
-        // Output posts as JSON
         echo json_encode($posts);
 
     } catch (PDOException $e) {
