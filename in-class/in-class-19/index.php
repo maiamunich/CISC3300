@@ -19,8 +19,8 @@ $env = parse_ini_file(__DIR__ . '/.env');
 echo "Request URI: " . $_SERVER['REQUEST_URI'] . "<br>";
 
 // Simplified URL check
-if ($_SERVER['REQUEST_URI'] === '/in-class-19/posts' || 
-    $_SERVER['REQUEST_URI'] === '/in-class-19/index.php') {
+if ($_SERVER['REQUEST_URI'] === 'MAMP-directory/in-class-19/posts' || 
+    $_SERVER['REQUEST_URI'] === 'MAMP-directory/in-class-19/index.php') {
     try {
         // Connect to database using .env variables
         $pdo = new PDO(
