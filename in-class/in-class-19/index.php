@@ -15,37 +15,39 @@ if (file_exists(__DIR__ . '/.env')) {
 // Load environment variables from .env file
 $env = parse_ini_file(__DIR__ . '/.env');
 
-// Check if we're accessing /posts
-$request_uri = $_SERVER['REQUEST_URI'];
-if (strpos($request_uri, '/in-class-19/posts') === false) {
+// Debug the request URI
+echo "Request URI: " . $_SERVER['REQUEST_URI'] . "<br>";
+
+// Simplified URL check
+if ($_SERVER['REQUEST_URI'] === '/in-class-19/posts' || 
+    $_SERVER['REQUEST_URI'] === '/in-class-19/index.php') {
+    try {
+        // Connect to database using .env variables
+        $pdo = new PDO(
+            "mysql:host={$env['DB_HOST']};dbname={$env['DB_NAME']}",
+            $env['DB_USER'],
+            $env['DB_PASS']
+        );
+        
+        // Set PDO to throw exceptions on error
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        
+        // Query posts table
+        $stmt = $pdo->query('SELECT * FROM posts');
+        $posts = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        
+        // Set JSON content type header
+        header('Content-Type: application/json');
+        
+        // Output posts as JSON
+        echo json_encode($posts);
+
+    } catch (PDOException $e) {
+        http_response_code(500);
+        echo json_encode(['error' => 'Database Error: ' . $e->getMessage()]);
+    }
+} else {
     http_response_code(404);
-    echo json_encode(['error' => 'Not Found']);
-    exit;
-}
-
-try {
-    // Connect to database using .env variables
-    $pdo = new PDO(
-        "mysql:host={$env['DB_HOST']};dbname={$env['DB_NAME']}",
-        $env['DB_USER'],
-        $env['DB_PASS']
-    );
-    
-    // Set PDO to throw exceptions on error
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    
-    // Query posts table
-    $stmt = $pdo->query('SELECT * FROM posts');
-    $posts = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    
-    // Set JSON content type header
-    header('Content-Type: application/json');
-    
-    // Output posts as JSON
-    echo json_encode($posts);
-
-} catch (PDOException $e) {
-    http_response_code(500);
-    echo json_encode(['error' => 'Database Error']);
+    echo json_encode(['error' => 'Not Found', 'uri' => $_SERVER['REQUEST_URI']]);
 }
 ?> 
